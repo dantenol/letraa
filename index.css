@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Playfair+Display&family=Quicksand:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Mitr", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.key {
+  border: 0;
+  background-color: #848beb;
+  width: 64px;
+  height: 56px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.key:hover {
+  background-color: #717ddc;
+}
+.key.left {
+  width: 108px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b7bcff;
+  height: 100vh;
+}
+
+#content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#content > h1 {
+  color: #fff;
+  text-align: center;
+}
+
+#letters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.letter {
+  width: 56px;
+  height: 56px;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #848beb;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.letter.ltr,
+.key.ltr {
+  background-color: #faf679;
+}
+.letter.pos,
+.key.pos {
+  background-color: #4ecb48;
+}
+.letter.wrong,
+.key.wrong {
+  background-color: #5656aa;
+}
+.letter.active {
+  border-bottom: 4px solid #6363f0;
+}
+
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 64px;
+}
+
+.dialog {
+  padding: 4px 16px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.dialog.show {
+  opacity: 1;
+  background-color: aqua;
+}
+
+.dialog.success {
+  background-color: #4ecb48;
+  opacity: 1;
+}
